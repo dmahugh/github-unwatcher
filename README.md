@@ -13,7 +13,7 @@ Then follow these steps:
 
 * Clone this repo into a folder
 * Create a ```credentials.txt``` that contains your GitHub username on the first line and a _personal access token_ (as available [here](https://github.com/settings/tokens)) on the second line
-* Edit ```unwatch.py``` and modify the list passed to ```remove_subscriptions()``` to include the GitHub owners (orgs and/or users) for which you want to retain subscriptions. **All other subscriptions will be deleted**.
+* Edit [unwatch.py](https://github.com/dmahugh/github-unwatcher/blob/master/unwatch.py) and modify the ```OWNERS_TO_KEEP_WATCHING``` list to include the GitHub owners (orgs and/or users) for which you want to retain subscriptions. **All other subscriptions will be deleted**.
 * Run the program with ```python unwatch.py```
 
 Here's what it looked like when I ran it for my GitHub account:

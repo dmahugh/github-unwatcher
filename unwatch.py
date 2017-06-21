@@ -4,6 +4,10 @@ in a specified list of orgs/user accounts."""
 import requests
 from githuberino import github_allpages
 
+# This is the list of orgs and user accounts that we want to continue
+# watching. All subscriptions to repos under other orgs/users will be deleted.
+OWNERS_TO_KEEP_WATCHING = ['microsoftgraph', 'officedev', 'dmahugh']
+
 def remove_subscriptions(keep=None):
     """Remove all GitHub subscriptions that are not in a list of orgs/users.
     keep = list of orgs or users for which subscriptions should be retained
@@ -38,4 +42,4 @@ def remove_subscriptions(keep=None):
         format(deleted, retained))
 
 if __name__ == '__main__':
-    remove_subscriptions(keep=['microsoftgraph', 'officedev', 'dmahugh'])
+    remove_subscriptions(OWNERS_TO_KEEP_WATCHING)
